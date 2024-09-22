@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Sephora Jean-mary Portfolio</title>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav>
+            <h1>Sephora Jean-mary</h1>
+            <div class="nav-links">
+                <a href="#aboutme">About Me</a>
+                <a href="#work">Work</a>
+                <a href="#contactme">Contact Me</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Me Section -->
+        <section id="aboutme">
+            <h2>About Me</h2>
+            <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img">
+            <p>Hello! I'm Sephora Jean-mary, a back-end developer with a degree in Computer Science. I enjoy working on web applications that solve real-world problems, with a focus on MongoDB, Express, and Node.js.</p>
+        </section>
+
+        <!-- Work Section with Rectangular Project Cards -->
+        <section id="work">
+            <h2>Work</h2>
+            <div class="project-gallery">
+                <!-- First Project (Larger Image) -->
+                <div class="project-card project-card-large">
+                    <a href="https://github.com/sjean149/PetTinder-Group-Project2" target="_blank">
+                        <img src="assets/images/pets.avif" alt="Pet Tendr Project">
+                        <h3>Pet Tendr</h3>
+                    </a>
+                    <p>A web app that connects pet owners to arrange playdates for their dogs. Built with Handlebars, PostgreSQL, and external APIs.</p>
+                </div>
+
+                <!-- Second Project -->
+                <div class="project-card">
+                    <a href="https://github.com/mbdrag3/ReBooked" target="_blank">
+                        <img src="assets/images/rebooked.png" alt="Textbook Reseller Project">
+                        <h3>Textbook Reseller</h3>
+                    </a>
+                    <p>An online platform for reselling college textbooks with features like book searches, user uploads, and secure purchases.</p>
+                </div>
+
+                <!-- Third Project -->
+                <div class="project-card">
+                    <a href="https://github.com/sjean149/SkyCast" target="_blank">
+                        <img src="assets/images/skycast.png" alt="Weather Dashboard Project">
+                        <h3>Weather Dashboard: SkyCast</h3>
+                    </a>
+                    <p>A dynamic weather dashboard that updates based on city names, with local storage saving the last searched city.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contactme">
+            <h2>Contact Me</h2>
+            <p>If you'd like to connect, feel free to reach out using the form below or through social media.</p>
+            <form action="https://formspree.io/f/your-email-endpoint" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Sephora Jean-mary | <a href="https://www.linkedin.com/in/sephora-jeanmary">LinkedIn</a> | <a href="mailto:sephora@example.com">Email Me</a></p>
+    </footer>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
